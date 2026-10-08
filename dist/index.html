@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>P B Sudhagar &amp; C Renuka | Wedding Invitation</title>
+    <meta
+      name="description"
+      content="A floral digital wedding invitation for P B Sudhagar and C Renuka on 25 October 2026 in Velachery, Chennai."
+    />
+    <meta name="theme-color" content="#fbf5ec" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fbf5ec'/%3E%3Cpath d='M18 41c14-4 26-15 30-27 4 19-8 34-30 39' fill='none' stroke='%23b99656' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='24' r='8' fill='%23f1b6b5'/%3E%3Ccircle cx='36' cy='20' r='7' fill='%23fffaf2'/%3E%3Ccircle cx='38' cy='34' r='8' fill='%23efc2a7'/%3E%3Cpath d='M14 36c9-4 14-2 19 4-9 4-15 2-19-4z' fill='%2392a681'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --ivory: #fbf5ec;
+        --ivory-deep: #f4e7d8;
+        --blush: #eeb8bb;
+        --rose: #c9787f;
+        --peach: #efc2a7;
+        --sage: #809273;
+        --sage-dark: #596b4e;
+        --gold: #b99656;
+        --gold-soft: #e1c889;
+        --ink: #3d332b;
+        --muted: #756a5f;
+        --shadow: 0 24px 80px rgba(93, 63, 45, 0.12);
+        --serif: "Cormorant Garamond", Georgia, serif;
+        --script: "Great Vibes", cursive;
+        --sans: "Manrope", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(238, 184, 187, 0.2), transparent 34rem),
+          linear-gradient(180deg, #fffaf2 0%, var(--ivory) 48%, #f7ede2 100%);
+        font-family: var(--sans);
+        overflow-x: hidden;
+      }
+
+      body.video-active {
+        overflow: hidden;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .intro-video {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+        background: #0f0c0a;
+        opacity: 1;
+        transition: opacity 1.25s ease, visibility 1.25s ease;
+      }
+
+      .intro-video.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .intro-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .intro-vignette {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.22), transparent 30%, rgba(0, 0, 0, 0.36)),
+          radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.38));
+        pointer-events: none;
+      }
+
+      .intro-controls {
+        position: absolute;
+        left: 50%;
+        bottom: max(1.5rem, env(safe-area-inset-bottom));
+        display: flex;
+        gap: 0.75rem;
+        transform: translateX(-50%);
+      }
+
+      button,
+      .map-button {
+        min-height: 44px;
+        border: 1px solid rgba(185, 150, 86, 0.48);
+        border-radius: 999px;
+        color: #4c3629;
+        background: rgba(255, 250, 242, 0.82);
+        box-shadow: 0 10px 28px rgba(49, 31, 23, 0.13);
+        font: 600 0.75rem/1 var(--sans);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: blur(16px);
+        transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      }
+
+      button {
+        padding: 0 1.15rem;
+      }
+
+      button:hover,
+      .map-button:hover {
+        transform: translateY(-2px);
+        border-color: rgba(185, 150, 86, 0.9);
+        background: rgba(255, 252, 247, 0.96);
+      }
+
+      .map-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.35rem;
+      }
+
+      .site {
+        position: relative;
+        min-height: 100vh;
+        isolation: isolate;
+      }
+
+      .floral-frame {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: url("assets/floral-frame.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: min(110vw, 78rem) auto;
+        opacity: 0.55;
+        pointer-events: none;
+        transform: translate3d(0, var(--floral-shift, 0px), 0) scale(1.02);
+        transition: transform 0.2s linear;
+      }
+
+      .petals {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .petal {
+        position: absolute;
+        top: -10vh;
+        width: 0.45rem;
+        height: 0.75rem;
+        border-radius: 70% 30% 70% 30%;
+        background: linear-gradient(135deg, rgba(238, 184, 187, 0.82), rgba(255, 250, 242, 0.9));
+        opacity: 0.62;
+        animation: petal-fall var(--duration) linear infinite;
+        animation-delay: var(--delay);
+        left: var(--left);
+      }
+
+      @keyframes petal-fall {
+        0% {
+          transform: translate3d(0, -8vh, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(var(--drift), 112vh, 0) rotate(540deg);
+        }
+      }
+
+      .section {
+        position: relative;
+        z-index: 2;
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: clamp(4.5rem, 9vw, 7rem) 1.2rem;
+      }
+
+      .inner {
+        width: min(100%, 54rem);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+
+      .reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .monogram {
+        min-height: 100svh;
+        overflow: hidden;
+      }
+
+      .bloom {
+        position: absolute;
+        width: min(78vw, 33rem);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 46%, rgba(255, 250, 242, 0.8), transparent 36%),
+          radial-gradient(circle at 42% 48%, rgba(238, 184, 187, 0.28), transparent 42%),
+          radial-gradient(circle at 56% 52%, rgba(239, 194, 167, 0.26), transparent 44%);
+        filter: blur(2px);
+        opacity: 0;
+        transform: scale(0.72) rotate(-12deg);
+        animation: bloom 2.1s ease 0.35s forwards;
+      }
+
+      @keyframes bloom {
+        to {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      .eyebrow {
+        margin: 0 0 1.3rem;
+        color: var(--sage-dark);
+        font: 600 0.76rem/1.5 var(--sans);
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      .initials {
+        margin: 0;
+        color: #6f4e38;
+        font: 400 clamp(5rem, 24vw, 12rem) / 0.88 var(--script);
+        text-shadow: 0 18px 58px rgba(185, 150, 86, 0.18);
+      }
+
+      .names {
+        margin: 1.2rem 0 0;
+        font: 600 clamp(2.65rem, 13vw, 7.5rem) / 0.9 var(--serif);
+        color: #4a3329;
+      }
+
+      .amp {
+        display: block;
+        margin: 0.35rem 0;
+        color: var(--gold);
+        font: 400 clamp(2.3rem, 10vw, 5rem) / 0.75 var(--script);
+      }
+
+      .subline {
+        max-width: 34rem;
+        margin: 1.6rem auto 0;
+        color: var(--muted);
+        font: 400 clamp(1.15rem, 4.4vw, 1.65rem) / 1.65 var(--serif);
+      }
+
+      .divider {
+        width: min(12rem, 48vw);
+        height: 1px;
+        margin: 1.8rem auto;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      }
+
+      .invitation-card {
+        padding: clamp(2.4rem, 7vw, 5.5rem) clamp(1.15rem, 5vw, 4rem);
+        border: 1px solid rgba(185, 150, 86, 0.28);
+        background:
+          linear-gradient(180deg, rgba(255, 252, 247, 0.8), rgba(251, 245, 236, 0.62)),
+          radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8), transparent 26rem);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+      }
+
+      .invitation-copy {
+        margin: 0 auto 2.1rem;
+        max-width: 36rem;
+        font: 500 clamp(1.5rem, 6vw, 2.75rem) / 1.25 var(--serif);
+        color: #554338;
+      }
+
+      .date-block {
+        display: grid;
+        gap: 0.65rem;
+        margin: 2rem auto 0;
+        color: var(--sage-dark);
+      }
+
+      .date-block strong {
+        display: block;
+        color: #4a3329;
+        font: 600 clamp(2.1rem, 9vw, 4.25rem) / 1 var(--serif);
+      }
+
+      .date-block span {
+        font: 600 clamp(0.88rem, 3.4vw, 1.1rem) / 1.5 var(--sans);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.6rem;
+        max-width: 33rem;
+        margin: 2rem auto 0;
+      }
+
+      .time-box {
+        min-height: 5.4rem;
+        display: grid;
+        place-items: center;
+        padding: 0.8rem 0.35rem;
+        border: 1px solid rgba(185, 150, 86, 0.26);
+        background: rgba(255, 250, 242, 0.7);
+      }
+
+      .time-box b {
+        display: block;
+        color: #4a3329;
+        font: 600 clamp(1.6rem, 7vw, 2.5rem) / 1 var(--serif);
+      }
+
+      .time-box small {
+        display: block;
+        margin-top: 0.2rem;
+        color: var(--muted);
+        font: 600 0.68rem/1 var(--sans);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .venue-frame {
+        position: relative;
+        width: min(100%, 42rem);
+        margin: 0 auto;
+        padding: clamp(2.4rem, 8vw, 4.5rem) clamp(1.2rem, 5vw, 3.4rem);
+        border: 1px solid rgba(185, 150, 86, 0.34);
+        background: rgba(255, 250, 242, 0.78);
+        box-shadow: var(--shadow);
+      }
+
+      .venue-frame::before {
+        content: "";
+        position: absolute;
+        inset: 0.55rem;
+        border: 1px solid rgba(185, 150, 86, 0.22);
+        pointer-events: none;
+      }
+
+      .venue-address {
+        position: relative;
+        margin: 0 auto 1.7rem;
+        max-width: 29rem;
+        color: #4f433b;
+        font: 500 clamp(1.12rem, 4.6vw, 1.55rem) / 1.72 var(--serif);
+      }
+
+      .gallery {
+        width: min(100%, 62rem);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(0.8rem, 2.5vw, 1.3rem);
+        margin-top: 2.3rem;
+      }
+
+      .photo-tile {
+        position: relative;
+        min-height: clamp(12rem, 36vw, 19rem);
+        overflow: hidden;
+        border: 1px solid rgba(185, 150, 86, 0.28);
+        background:
+          linear-gradient(160deg, rgba(255, 252, 247, 0.92), rgba(239, 194, 167, 0.24)),
+          url("assets/floral-frame.png") center / 145% auto no-repeat;
+        box-shadow: 0 18px 48px rgba(93, 63, 45, 0.1);
+      }
+
+      .photo-tile::after {
+        content: "P & R";
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: rgba(92, 68, 50, 0.72);
+        font: 400 clamp(2.6rem, 10vw, 5rem) / 1 var(--script);
+      }
+
+      .blessing .names {
+        font-size: clamp(2.4rem, 11vw, 6rem);
+      }
+
+      .gold-shimmer {
+        position: relative;
+        display: inline-block;
+      }
+
+      .gold-shimmer::after {
+        content: "";
+        position: absolute;
+        inset: -0.1em -0.2em;
+        background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.65) 48%, transparent 72%);
+        transform: translateX(-120%);
+        animation: shimmer 5.5s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      @keyframes shimmer {
+        0%,
+        58% {
+          transform: translateX(-120%);
+        }
+        78%,
+        100% {
+          transform: translateX(120%);
+        }
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @media (max-width: 760px) {
+        .section {
+          padding-inline: 1rem;
+        }
+
+        .floral-frame {
+          background-size: 160vw auto;
+          opacity: 0.46;
+        }
+
+        .invitation-card {
+          border-left: 0;
+          border-right: 0;
+        }
+
+        .countdown-grid {
+          gap: 0.45rem;
+        }
+
+        .time-box {
+          min-height: 4.8rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .photo-tile {
+          min-height: 13rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="video-active">
+    <aside class="intro-video" aria-label="Intro wedding video">
+      <video id="introVideo" autoplay muted playsinline preload="auto" poster="assets/floral-frame.png">
+        <source src="assets/intro-wedding.mp4" type="video/mp4" />
+      </video>
+      <div class="intro-vignette"></div>
+      <div class="intro-controls">
+        <button type="button" id="soundToggle" aria-label="Turn video sound on">Sound</button>
+        <button type="button" id="skipIntro" aria-label="Enter the wedding invitation">Enter</button>
+      </div>
+    </aside>
+
+    <main class="site" id="invitation">
+      <div class="floral-frame" aria-hidden="true"></div>
+      <div class="petals" id="petals" aria-hidden="true"></div>
+
+      <section class="section monogram" aria-labelledby="couple">
+        <div class="bloom" aria-hidden="true"></div>
+        <div class="inner reveal">
+          <p class="eyebrow">Wedding Invitation</p>
+          <h1 id="couple" class="initials gold-shimmer">P &amp; R</h1>
+          <p class="names">
+            P B Sudhagar
+            <span class="amp">&amp;</span>
+            C Renuka
+          </p>
+          <p class="subline">25 October 2026</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="invitation-title">
+        <div class="inner invitation-card reveal">
+          <p class="eyebrow">Together with their families</p>
+          <h2 id="invitation-title" class="invitation-copy">
+            we invite you to celebrate<br />
+            their beautiful beginning.
+          </h2>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="names">
+            P B Sudhagar
+            <span class="amp">&amp;</span>
+            C Renuka
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="date-title">
+        <div class="inner reveal">
+          <p class="eyebrow">Date &amp; Time</p>
+          <div class="date-block" id="date-title">
+            <strong>25 October 2026</strong>
+            <span>10:00 AM &ndash; 12:00 PM</span>
+          </div>
+          <div class="countdown-grid" aria-label="Wedding countdown">
+            <div class="time-box"><span><b id="days">0</b><small>Days</small></span></div>
+            <div class="time-box"><span><b id="hours">0</b><small>Hours</small></span></div>
+            <div class="time-box"><span><b id="minutes">0</b><small>Minutes</small></span></div>
+            <div class="time-box"><span><b id="seconds">0</b><small>Seconds</small></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="venue-title">
+        <div class="inner reveal">
+          <p class="eyebrow">Venue</p>
+          <div class="venue-frame">
+            <h2 id="venue-title" class="sr-only">Wedding venue</h2>
+            <p class="venue-address">
+              37F, Velachery Main Road,<br />
+              Next to Sutherland,<br />
+              V.O.C Nagar, Vijaya Nagar,<br />
+              Velachery, Chennai,<br />
+              Tamil Nadu &ndash; 600042
+            </p>
+            <a
+              class="map-button"
+              href="https://www.google.com/maps/search/?api=1&query=37F%20Velachery%20Main%20Road%20Next%20to%20Sutherland%20VOC%20Nagar%20Vijaya%20Nagar%20Velachery%20Chennai%20Tamil%20Nadu%20600042"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Location
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="gallery-title">
+        <div class="inner gallery reveal">
+          <p class="eyebrow">Photo Gallery</p>
+          <h2 id="gallery-title" class="subline">
+            A few cherished frames from their journey.
+          </h2>
+          <div class="gallery-grid" aria-label="Wedding photo gallery">
+            <div class="photo-tile" aria-label="Gallery frame one"></div>
+            <div class="photo-tile" aria-label="Gallery frame two"></div>
+            <div class="photo-tile" aria-label="Gallery frame three"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section blessing" aria-labelledby="blessing-title">
+        <div class="inner invitation-card reveal">
+          <p id="blessing-title" class="invitation-copy">
+            With love and joy,<br />
+            we invite you to be a part<br />
+            of our special day.
+          </p>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="names">
+            P B Sudhagar
+            <span class="amp">&amp;</span>
+            C Renuka
+          </p>
+          <p class="subline">25 October 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const intro = document.querySelector(".intro-video");
+      const video = document.getElementById("introVideo");
+      const skipIntro = document.getElementById("skipIntro");
+      const soundToggle = document.getElementById("soundToggle");
+
+      function finishIntro() {
+        intro.classList.add("is-hidden");
+        document.body.classList.remove("video-active");
+        window.setTimeout(() => intro.remove(), 1400);
+      }
+
+      video.addEventListener("ended", finishIntro);
+      skipIntro.addEventListener("click", finishIntro);
+      soundToggle.addEventListener("click", async () => {
+        video.muted = !video.muted;
+        soundToggle.textContent = video.muted ? "Sound" : "Mute";
+        soundToggle.setAttribute("aria-label", video.muted ? "Turn video sound on" : "Turn video sound off");
+        try {
+          await video.play();
+        } catch (error) {
+          soundToggle.textContent = "Play";
+        }
+      });
+
+      video.play().catch(() => {
+        video.controls = true;
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("in-view");
+          });
+        },
+        { threshold: 0.18 }
+      );
+      document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
+
+      const petals = document.getElementById("petals");
+      for (let i = 0; i < 18; i += 1) {
+        const petal = document.createElement("span");
+        petal.className = "petal";
+        petal.style.setProperty("--left", `${Math.random() * 100}%`);
+        petal.style.setProperty("--drift", `${(Math.random() * 2 - 1) * 90}px`);
+        petal.style.setProperty("--duration", `${12 + Math.random() * 14}s`);
+        petal.style.setProperty("--delay", `${Math.random() * -18}s`);
+        petals.appendChild(petal);
+      }
+
+      const target = new Date("2026-10-25T10:00:00+05:30").getTime();
+      const units = {
+        days: document.getElementById("days"),
+        hours: document.getElementById("hours"),
+        minutes: document.getElementById("minutes"),
+        seconds: document.getElementById("seconds")
+      };
+
+      function updateCountdown() {
+        const distance = Math.max(0, target - Date.now());
+        const days = Math.floor(distance / 86400000);
+        const hours = Math.floor((distance % 86400000) / 3600000);
+        const minutes = Math.floor((distance % 3600000) / 60000);
+        const seconds = Math.floor((distance % 60000) / 1000);
+        units.days.textContent = days;
+        units.hours.textContent = hours.toString().padStart(2, "0");
+        units.minutes.textContent = minutes.toString().padStart(2, "0");
+        units.seconds.textContent = seconds.toString().padStart(2, "0");
+      }
+
+      updateCountdown();
+      window.setInterval(updateCountdown, 1000);
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          const shift = Math.min(34, window.scrollY * 0.018);
+          document.documentElement.style.setProperty("--floral-shift", `${shift}px`);
+        },
+        { passive: true }
+      );
+    </script>
+  </body>
+</html>
