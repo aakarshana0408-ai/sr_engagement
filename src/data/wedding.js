@@ -1,7 +1,6 @@
 export const wedding = {
-  groom: 'P B Sudhagar',
-  bride: 'C Renuka',
-  initials: 'P & R',
+  groom: 'Sudhagar',
+  bride: 'Renuka',
   date: '25 October 2026',
   day: '25',
   month: 'October',
@@ -16,7 +15,6 @@ export const wedding = {
   ],
   venueMapsQuery: 'A2B Velachery, Sabthagiri Hall, Velachery, Chennai',
   introVideo: '/assets/intro-wedding.mp4',
-  music: '/assets/wedding-music.mp3',
   floralArtwork: '/assets/floral-frame.png',
   thoranamArtwork: '/assets/tamil-thoranam.png',
   lampArtwork: '/assets/tamil-kuthuvilakku.png',

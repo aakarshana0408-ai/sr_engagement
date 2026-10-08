@@ -70,7 +70,6 @@ button:disabled { cursor: default; }
 .opening { min-height: 94svh; padding: 8.5rem 2rem 5.5rem; background: #faf7f0; }
 .opening-content { width: 100%; max-width: 48rem; }
 .opening-label { opacity: 0; animation: text-in 1.4s .8s forwards; }
-.opening-monogram { font-family: var(--font-serif); font-size: 4.75rem; color: var(--gold); line-height: 1.15; margin-top: .5rem; opacity: 0; animation: text-in 1.8s 1.1s forwards, gold-shimmer 8s 3s ease-in-out infinite; }
 .opening-divider { opacity: 0; margin: .2rem auto 1.8rem; animation: text-in 1.2s 1.8s forwards; }
 .opening-names { font-size: 2.5rem; opacity: 0; animation: text-in 1.5s 2s forwards; }
 .opening-names > span { opacity: 0; animation: text-in 1.2s 2s forwards; }
@@ -141,7 +140,6 @@ button:disabled { cursor: default; }
 .placeholder-1 { background: #edf0e6; }
 .placeholder-2 { background: #f2e8da; }
 .placeholder-3 { background: #f6f0e4; }
-.placeholder-monogram { font-family: var(--script); font-size: 2.5rem; color: #a48e63; position: relative; z-index: 1; }
 .placeholder-number { position: absolute; bottom: .85rem; left: 1rem; font-size: .625rem; color: var(--green); }
 .gallery-florals .floral-corner { width: 85px; height: 85px; opacity: .65; transition: transform 1s; }
 .gallery-item:hover .floral-corner { transform: scale(1.06); }
@@ -165,10 +163,6 @@ button:disabled { cursor: default; }
 .floating-nav a { min-height: 44px; display: grid; place-items: center; padding: .5rem .85rem; font-size: .6875rem; color: var(--green); position: relative; }
 .floating-nav a::after { content: ''; position: absolute; bottom: .4rem; height: 1px; left: .85rem; right: .85rem; background: var(--maroon); transform: scaleX(0); transition: transform .3s; }
 .floating-nav a.nav-active::after, .floating-nav a:hover::after { transform: scaleX(1); }
-.music-control { position: fixed; top: max(1rem, env(safe-area-inset-top)); right: 1rem; z-index: 35; }
-.music-button { box-shadow: 0 3px 18px #7124310a; background: #efe2bf; color: #712431; outline: 1px solid #a48643; outline-offset: 3px; border: 1px solid #a48643; backdrop-filter: blur(12px); }
-.music-playing { background: #e2cd97; }
-.music-error { position: absolute; top: 3.2rem; right: 0; width: 10rem; background: #faf7f0; padding: .6rem; font-size: .75rem; text-align: center; border: 1px solid #ad956245; }
 .petals { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 20; }
 .petal { position: absolute; top: -3rem; width: 5px; height: 9px; background: #fffefa; box-shadow: inset 0 0 2px #d6c6a9; border-radius: 80% 20% 60% 40%; opacity: .8; animation: petal-fall var(--duration) var(--delay) linear infinite; }
 @keyframes petal-fall { from { transform: translate3d(0, -3rem, 0) rotate(0); } to { transform: translate3d(var(--drift), 110vh, 0) rotate(450deg); } }
@@ -223,7 +217,6 @@ button:disabled { cursor: default; }
 .gallery-placeholder .temple-frame-line::before { display: none; }
 .gallery-placeholder .temple-seal { display: none; }
 .gallery-placeholder .thoranam { width: calc(100% - 1rem); top: .4rem; }
-.gallery-placeholder .placeholder-monogram { font-family: var(--font-serif); font-size: 2rem; }
 .gallery-placeholder .placeholder-number { color: var(--maroon); }
 @keyframes garland-sway { from { transform: rotate(-.4deg); } to { transform: rotate(.4deg); } }
 @keyframes garland-bloom { from { opacity: 0; transform: translateX(-50%) scale(.98); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
@@ -240,7 +233,6 @@ button:disabled { cursor: default; }
   .section-space { padding: 7rem 3rem; }
   .opening { padding: 11rem 3rem 6rem; }
   .floral-corner { width: 285px; height: 285px; }
-  .opening-monogram { font-size: 6.5rem; line-height: 1.2; }
   .opening-names { font-size: 4.25rem; }
   .opening-copy { font-size: 1.45rem; }
   .hero { min-height: 94svh; padding: 11rem 3rem 7rem; }
@@ -257,7 +249,6 @@ button:disabled { cursor: default; }
   .venue-address { font-size: 1.4rem; }
   .gallery-grid { gap: 1.5rem; max-width: 51rem; }
   .gallery-florals .floral-corner { width: 165px; height: 165px; }
-  .placeholder-monogram { font-size: 4rem; }
   .blessing .couple-names { font-size: 4.5rem; }
   .blessing-copy { font-size: 1.8rem; }
   .floating-nav a { font-size: .75rem; padding-inline: 1.4rem; }
@@ -273,7 +264,6 @@ button:disabled { cursor: default; }
   .lamp-right { right: max(3rem, calc((100% - 62rem) / 2)); }
   .blessing-lamps .lamp { width: 85px; height: 220px; bottom: 4rem; }
   .gallery-section { padding-top: 12rem; }
-  .gallery-placeholder .placeholder-monogram { font-size: 3.75rem; }
 }
 
 @media (max-width: 359px) {

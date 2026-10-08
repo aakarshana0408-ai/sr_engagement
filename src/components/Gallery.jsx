@@ -34,7 +34,6 @@ export default function Gallery() {
           <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
         </button> : <div className={`gallery-placeholder placeholder-${i}`} role="img" aria-label="Botanical placeholder for a future couple photo">
           <FloralBackground variant="gallery-florals" corners={i % 2 ? ['tr', 'bl'] : ['tl', 'br']} />
-          <span className="placeholder-monogram">{wedding.initials}</span>
           <span className="placeholder-number">{photo.id}</span>
         </div>}
       </Reveal>)}

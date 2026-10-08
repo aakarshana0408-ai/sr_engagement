@@ -12,7 +12,6 @@ export default function Opening() {
     <div className="opening-content relative z-10 mx-auto text-center">
       <p className="small-label opening-label">The Engagement Of</p>
       <Kolam className="opening-kolam" />
-      <p className="opening-monogram">{wedding.initials}</p>
       <div className="fine-divider opening-divider" aria-hidden="true"><span /></div>
       <CoupleNames as="h1" id="couple-title" className="opening-names" />
       <p className="opening-copy serif-copy">{wedding.opening.map((line) => <span key={line}>{line}</span>)}</p>
