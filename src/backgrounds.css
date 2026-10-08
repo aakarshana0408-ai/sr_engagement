@@ -1,0 +1,92 @@
+/* Each section contains one artwork image; foreground styles remain in styles.css. */
+.invitation :is(.opening, .hero, .details-section, .venue-section, .gallery-section, .blessing) {
+  isolation: isolate;
+  box-shadow: inset 0 0 85px 12px rgb(107 81 37 / 2.5%);
+}
+
+.invitation-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  isolation: isolate;
+  --scene-paper: 250 247 240;
+  --scene-opacity: .2;
+}
+
+.invitation-paper-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .035;
+}
+
+.invitation-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: max(100%, 40rem);
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%);
+  opacity: var(--scene-opacity);
+  filter: saturate(.8);
+}
+
+.invitation-text-wash {
+  position: absolute;
+  inset: 14% 0 14%;
+  width: min(82%, 48rem);
+  margin-inline: auto;
+  background: radial-gradient(ellipse at 50% 43%, rgb(var(--scene-paper) / 90%) 0%, rgb(var(--scene-paper) / 78%) 36%, rgb(var(--scene-paper) / 28%) 65%, transparent 87%);
+}
+
+.scene-home { --scene-opacity: .21; }
+.scene-home .invitation-scene { bottom: 4%; }
+
+.scene-wedding { --scene-paper: 246 240 228; --scene-opacity: .2; }
+.scene-wedding .invitation-scene { bottom: 8%; }
+
+.scene-date { --scene-paper: 248 245 236; --scene-opacity: .18; }
+.scene-date .invitation-scene {
+  width: min(96%, 48rem);
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.scene-date .invitation-text-wash { width: min(64%, 34rem); }
+
+.scene-venue .invitation-scene {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  object-fit: cover;
+  object-position: 28% center;
+  mask-image: radial-gradient(ellipse 90% 50% at 50% 50%, #000 62%, rgb(0 0 0 / 80%) 76%, transparent 100%);
+}
+
+.scene-gallery { --scene-opacity: .18; }
+.scene-gallery .invitation-scene { width: min(100%, 42rem); }
+
+.scene-final { --scene-paper: 246 240 228; --scene-opacity: .24; }
+.scene-final .invitation-scene { width: max(100%, 44rem); }
+.scene-final .invitation-text-wash {
+  inset: 10% 0 23%;
+  width: min(78%, 48rem);
+  background: radial-gradient(ellipse at 50% 43%, rgb(var(--scene-paper) / 94%) 0%, rgb(var(--scene-paper) / 82%) 35%, rgb(var(--scene-paper) / 32%) 65%, transparent 87%);
+}
+
+@media (max-width: 767px) {
+  .scene-final .invitation-scene {
+    width: max(100%, 36rem);
+    height: 56%;
+    object-fit: fill;
+  }
+}
+
+@media (min-width: 768px) {
+  .scene-venue .invitation-text-wash { left: auto; right: 3%; width: min(75%, 48rem); }
+}
