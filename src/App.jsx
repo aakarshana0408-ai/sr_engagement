@@ -7,7 +7,6 @@ import Venue from './components/Venue';
 import Footer from './components/Footer';
 import Petals from './components/Petals';
 import Navigation from './components/Navigation';
-import MusicButton from './components/MusicButton';
 
 export default function App() {
   const [entered, setEntered] = useState(false);
@@ -19,7 +18,6 @@ export default function App() {
       <main><Opening /><Hero /><WeddingDetails /><Venue /></main>
       <Footer />
       <Navigation />
-      <MusicButton />
     </div>}
   </>;
 }

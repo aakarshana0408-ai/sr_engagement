@@ -11,7 +11,6 @@ Open the localhost URL printed by Vite. The existing intro video and floral artw
 
 - Edit names, date, venue, wording, and gallery entries in `src/data/wedding.js`.
 - Replace `public/assets/intro-wedding.mp4` to change the opening video.
-- Optionally add `public/assets/wedding-music.mp3` and reload the page. The play/pause control appears only when that file exists. Music starts only after a guest taps it.
 - Add your photos to `public/assets/`, then set each gallery entry's `src` to its path (for example `/assets/photo-1.jpg`). Until then, the gallery displays botanical monogram placeholders. Photos open in an accessible full-size dialog.
 - Run `npm run build` for a production build in `build/`; `npm run preview` previews it locally.
 
