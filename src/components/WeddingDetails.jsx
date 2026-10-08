@@ -6,7 +6,7 @@ import { Kolam, Lamps, TempleFrame } from './TraditionalDecor';
 import InvitationBackdrop from './InvitationBackdrop';
 
 export default function WeddingDetails() {
-  return <section className="details-section section-space" aria-labelledby="date-title">
+  return <section id="wedding" className="details-section section-space" aria-labelledby="date-title">
     <InvitationBackdrop scene="date" />
     <Reveal className="mx-auto max-w-3xl text-center">
       <p className="small-label">The Engagement</p>
