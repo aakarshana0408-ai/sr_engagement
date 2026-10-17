@@ -6,8 +6,8 @@ export const wedding = {
   month: 'October',
   year: '2026',
   weekday: 'Sunday',
-  time: '10:00 AM \u2013 12:00 PM',
-  startsAt: '2026-10-25T10:00:00+05:30',
+  time: '10:30 AM \u2013 12:00 PM',
+  startsAt: '2026-10-25T10:30:00+05:30',
   endsAt: '2026-10-25T12:00:00+05:30',
   venue: [
     'A2B VELACHERRY, SABTHAGIRI HALL',
@@ -18,7 +18,7 @@ export const wedding = {
   floralArtwork: '/assets/floral-frame.png',
   thoranamArtwork: '/assets/tamil-thoranam.png',
   lampArtwork: '/assets/tamil-kuthuvilakku.png',
-  opening: ['Together with their families,', 'we invite you to celebrate', 'their special day.'],
+  opening: ['Together with our families,', 'we invite you to celebrate', 'our special day.'],
   blessing: ['With love in our hearts,', 'we invite you to be a part', 'of our special day.'],
   // Add photo paths such as /assets/photo-1.jpg to replace the botanical placeholders.
   gallery: [
