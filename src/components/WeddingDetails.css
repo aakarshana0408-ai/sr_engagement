@@ -24,19 +24,13 @@
 
 .engagement-date-section .date-panel-kicker {
   position: absolute;
-  top: 8.2%;
+  top: 14%;
   left: 17%;
   width: 66%;
-  font-size: 12px;
+  color: #42451f;
+  font-size: 11px;
   line-height: 1.2;
   text-transform: uppercase;
-}
-
-.engagement-date-section .date-panel-heading-divider {
-  position: absolute;
-  top: 11.3%;
-  left: 35%;
-  width: 30%;
 }
 
 .engagement-date-section .date-panel-ornament {
@@ -52,14 +46,14 @@
 
 .engagement-date-section .date-panel-title {
   position: absolute;
-  top: 13.4%;
+  top: 20%;
   left: 16%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2%;
   width: 68%;
-  height: 10.7%;
+  height: 8.7%;
   margin: 0;
   color: #760c27;
   font-size: 48px;
@@ -82,52 +76,56 @@
 
 .engagement-date-section .date-panel-title-flourish {
   position: absolute;
-  top: 22.4%;
-  left: 36%;
-  width: 28%;
+  top: 29%;
+  left: 31%;
+  width: 38%;
 }
 
 .engagement-date-section .date-panel-calendar {
   position: absolute;
-  top: 30.4%;
-  left: 29%;
+  top: 37.8%;
+  left: 32%;
   display: grid;
-  grid-template-rows: 19% 43% 23% 15%;
+  grid-template-rows: 16% 47% 25% 12%;
   align-items: center;
   justify-items: center;
-  width: 42%;
-  height: 40.5%;
+  width: 36%;
+  height: 26.5%;
   line-height: 1;
 }
 
 .engagement-date-section .date-panel-weekday {
   align-self: start;
-  font-size: 12px;
+  color: #42451f;
+  font-size: 11px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .engagement-date-section .date-panel-day {
   color: #760c27;
-  font-size: 82px;
+  font-size: 72px;
   font-style: italic;
-  line-height: .9;
+  line-height: .75;
+  transform: translateY(-.08em);
 }
 
 .engagement-date-section .date-panel-month {
-  font-size: 34px;
+  color: #393b1a;
+  font-size: 29px;
   line-height: 1;
 }
 
 .engagement-date-section .date-panel-year {
   align-self: end;
-  font-size: 15px;
+  color: #42451f;
+  font-size: 12px;
   line-height: 1.2;
 }
 
 .engagement-date-section .date-panel-time {
   position: absolute;
-  top: 79.6%;
+  top: 69%;
   left: 17%;
   display: flex;
   align-items: center;
@@ -135,7 +133,7 @@
   gap: .6em;
   width: 66%;
   margin: 0;
-  color: #4b2b0e;
+  color: #393b1a;
   font-family: var(--font-serif);
   font-size: 14px;
   line-height: 1.4;
@@ -149,64 +147,114 @@
   color: #9f6815;
 }
 
-.engagement-date-section .date-countdown-shell {
-  display: flow-root;
-  padding: 1rem 1.25rem 1.5rem;
+.engagement-date-section .countdown-wrap {
+  position: absolute;
+  top: 76.2%;
+  left: 5%;
+  width: 90%;
+  height: 20.3%;
+  margin: 0;
 }
 
-.engagement-date-section .date-countdown-shell .countdown-wrap {
-  margin-top: 0;
+.engagement-date-section .countdown-caption {
+  margin: 0;
+  color: #760c27;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.engagement-date-section .countdown {
+  position: absolute;
+  top: 36%;
+  bottom: 4%;
+  left: 2%;
+  width: 96%;
+  max-width: none;
+  margin: 0;
+  padding: 2% 0;
+  border: 0;
+  background: transparent;
+}
+
+.engagement-date-section .countdown-unit {
+  border-right-color: #d1b36a99;
+}
+
+.engagement-date-section .countdown-value {
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.engagement-date-section .countdown-label {
+  margin-top: .25em;
+  font-family: var(--font-serif);
+  font-size: 11px;
+  line-height: 1.2;
 }
 
 @media (min-width: 360px) {
-  .engagement-date-section .date-panel-kicker { font-size: 14px; }
+  .engagement-date-section .date-panel-kicker { font-size: 12px; }
   .engagement-date-section .date-panel-title { font-size: 58px; }
   .engagement-date-section .date-panel-title em { font-size: 36px; }
-  .engagement-date-section .date-panel-weekday { font-size: 14px; }
-  .engagement-date-section .date-panel-day { font-size: 96px; }
-  .engagement-date-section .date-panel-month { font-size: 39px; }
-  .engagement-date-section .date-panel-year { font-size: 17px; }
+  .engagement-date-section .date-panel-weekday { font-size: 12px; }
+  .engagement-date-section .date-panel-day { font-size: 84px; }
+  .engagement-date-section .date-panel-month { font-size: 34px; }
+  .engagement-date-section .date-panel-year { font-size: 14px; }
   .engagement-date-section .date-panel-time { font-size: 16px; }
+  .engagement-date-section .countdown-caption { font-size: 14px; }
+  .engagement-date-section .countdown-value { font-size: 28px; }
+  .engagement-date-section .countdown-label { font-size: 12px; }
 }
 
 @media (min-width: 400px) {
   .engagement-date-section .date-panel-title { font-size: 64px; }
   .engagement-date-section .date-panel-title em { font-size: 40px; }
-  .engagement-date-section .date-panel-day { font-size: 108px; }
-  .engagement-date-section .date-panel-month { font-size: 44px; }
+  .engagement-date-section .date-panel-day { font-size: 92px; }
+  .engagement-date-section .date-panel-month { font-size: 38px; }
   .engagement-date-section .date-panel-time { font-size: 18px; }
+  .engagement-date-section .countdown-caption { font-size: 16px; }
+  .engagement-date-section .countdown-value { font-size: 32px; }
+  .engagement-date-section .countdown-label { font-size: 13px; }
 }
 
 @media (min-width: 600px) {
-  .engagement-date-section .date-panel-kicker { font-size: 20px; }
+  .engagement-date-section .date-panel-kicker { font-size: 18px; }
   .engagement-date-section .date-panel-title { font-size: 88px; }
   .engagement-date-section .date-panel-title em { font-size: 54px; }
-  .engagement-date-section .date-panel-weekday { font-size: 20px; }
-  .engagement-date-section .date-panel-day { font-size: 148px; }
-  .engagement-date-section .date-panel-month { font-size: 60px; }
-  .engagement-date-section .date-panel-year { font-size: 24px; }
+  .engagement-date-section .date-panel-weekday { font-size: 18px; }
+  .engagement-date-section .date-panel-day { font-size: 128px; }
+  .engagement-date-section .date-panel-month { font-size: 52px; }
+  .engagement-date-section .date-panel-year { font-size: 20px; }
   .engagement-date-section .date-panel-time { font-size: 24px; }
+  .engagement-date-section .countdown-caption { font-size: 22px; }
+  .engagement-date-section .countdown-value { font-size: 44px; }
+  .engagement-date-section .countdown-label { font-size: 18px; }
 }
 
 @media (min-width: 768px) {
-  .engagement-date-section .date-panel-kicker { font-size: 24px; }
+  .engagement-date-section .date-panel-kicker { font-size: 22px; }
   .engagement-date-section .date-panel-title { font-size: 112px; }
   .engagement-date-section .date-panel-title em { font-size: 68px; }
-  .engagement-date-section .date-panel-weekday { font-size: 24px; }
-  .engagement-date-section .date-panel-day { font-size: 184px; }
-  .engagement-date-section .date-panel-month { font-size: 76px; }
-  .engagement-date-section .date-panel-year { font-size: 28px; }
+  .engagement-date-section .date-panel-weekday { font-size: 22px; }
+  .engagement-date-section .date-panel-day { font-size: 164px; }
+  .engagement-date-section .date-panel-month { font-size: 68px; }
+  .engagement-date-section .date-panel-year { font-size: 24px; }
   .engagement-date-section .date-panel-time { font-size: 28px; }
-  .engagement-date-section .date-countdown-shell { padding: 1.5rem 3rem 2rem; }
+  .engagement-date-section .countdown-caption { font-size: 28px; }
+  .engagement-date-section .countdown-value { font-size: 56px; }
+  .engagement-date-section .countdown-label { font-size: 22px; }
 }
 
 @media (min-width: 960px) {
-  .engagement-date-section .date-panel-kicker { font-size: 30px; }
+  .engagement-date-section .date-panel-kicker { font-size: 28px; }
   .engagement-date-section .date-panel-title { font-size: 144px; }
   .engagement-date-section .date-panel-title em { font-size: 88px; }
-  .engagement-date-section .date-panel-weekday { font-size: 30px; }
-  .engagement-date-section .date-panel-day { font-size: 236px; }
-  .engagement-date-section .date-panel-month { font-size: 92px; }
-  .engagement-date-section .date-panel-year { font-size: 34px; }
-  .engagement-date-section .date-panel-time { font-size: 36px; }
+  .engagement-date-section .date-panel-weekday { font-size: 28px; }
+  .engagement-date-section .date-panel-day { font-size: 210px; }
+  .engagement-date-section .date-panel-month { font-size: 88px; }
+  .engagement-date-section .date-panel-year { font-size: 30px; }
+  .engagement-date-section .date-panel-time { font-size: 34px; }
+  .engagement-date-section .countdown-caption { font-size: 38px; }
+  .engagement-date-section .countdown-value { font-size: 72px; }
+  .engagement-date-section .countdown-label { font-size: 26px; }
 }
