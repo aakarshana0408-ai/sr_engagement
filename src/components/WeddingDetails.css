@@ -1,23 +1,23 @@
 .details-section.engagement-date-section {
+  display: flow-root;
+  min-height: 0;
   padding: 0;
   background: #faf7f0;
 }
 
 .engagement-date-section .date-poster {
   position: relative;
+  display: block;
   width: 100%;
   max-width: 64rem;
-  aspect-ratio: 1122 / 1402;
-  overflow: hidden;
   color: #4b2b0e;
   font-family: var(--font-serif);
 }
 
 .engagement-date-section .date-poster-art {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   pointer-events: none;
 }
@@ -150,7 +150,12 @@
 }
 
 .engagement-date-section .date-countdown-shell {
-  padding: 0 1.25rem 6rem;
+  display: flow-root;
+  padding: 1rem 1.25rem 1.5rem;
+}
+
+.engagement-date-section .date-countdown-shell .countdown-wrap {
+  margin-top: 0;
 }
 
 @media (min-width: 360px) {
@@ -192,7 +197,7 @@
   .engagement-date-section .date-panel-month { font-size: 76px; }
   .engagement-date-section .date-panel-year { font-size: 28px; }
   .engagement-date-section .date-panel-time { font-size: 28px; }
-  .engagement-date-section .date-countdown-shell { padding: 0 3rem 7rem; }
+  .engagement-date-section .date-countdown-shell { padding: 1.5rem 3rem 2rem; }
 }
 
 @media (min-width: 960px) {
